@@ -1,10 +1,9 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Finds is a personal, non-commercial music discovery and playlist management project.">
+  <meta name="description" content="Finds is a personal, non-commercial music discovery and playlist organization project.">
   <title>Finds — Personal Music Discovery</title>
   <style>
     :root { color-scheme: dark; }
@@ -26,85 +25,19 @@
     h3 { font-size: 17px; margin-top: 28px; }
     p, li { color: #c0c9c1; }
     footer { border-top: 1px solid #394344; padding-top: 24px; font-size: 13px; color: #a9b5ac; }
-    @media (max-width: 560px) {
-      header, footer { align-items: flex-start; flex-direction: column; }
-      .hero { padding: 65px 0; }
-    }
+    @media (max-width: 560px) { header, footer { align-items: flex-start; flex-direction: column; } .hero { padding: 65px 0; } }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <div class="logo">finds.</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#terms">Terms</a>
-      </nav>
-    </header>
-
+    <header><div class="logo">finds.</div><nav><a href="#about">About</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a></nav></header>
     <main>
-      <div class="hero">
-        <div class="eyebrow">Personal music discovery</div>
-        <h1>Good music deserves to be found again.</h1>
-        <p class="intro">Finds is a personal, non-commercial project for rediscovering music from saved social media posts and organizing identified recordings into personal playlists.</p>
-      </div>
-
-      <section id="about">
-        <h2>About Finds</h2>
-
-        <p>Finds is a personal, non-commercial music discovery and playlist management project developed and operated by a single individual.</p>
-
-        <p>The project helps its owner organize music identified from previously saved Instagram posts and find corresponding recordings on YouTube.</p>
-
-        <p>Finds uses the YouTube Data API v3 to search for music, retrieve playlist information, verify playlist ownership, and add selected videos to a personal YouTube playlist.</p>
-
-        <p>The application uses Google OAuth for authorized access to the owner's YouTube account. OAuth credentials are managed through GitHub Actions Secrets.</p>
-
-        <p>To reduce unnecessary API requests, Finds processes identified tracks in batches, checks for existing playlist entries, and maintains a cache of previous search results.</p>
-
-        <p>A separate Spotify API integration supports personal music matching and playlist synchronization.</p>
-
-        <p>This website is informational only. Finds is not a public music streaming service and does not offer registration or access to other users.</p>
-      </section>
-
-      <section id="privacy">
-        <h2>Privacy Policy</h2>
-
-        <p><strong>Scope.</strong> This website is an informational page for a personal, single-user project. It does not provide user registration or a public sign-in flow.</p>
-
-        <p><strong>Data used by Finds.</strong> The private tool processes saved Instagram post links, manually reviewed music identification information, YouTube search results, YouTube video IDs, and playlist data needed to organize the developer's own playlists.</p>
-
-        <p><strong>Google and YouTube.</strong> Finds uses the YouTube Data API and Google OAuth to access the developer's own YouTube account for authorized playlist actions. Use of YouTube is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's <a href="https://policies.google.com/privacy">Privacy Policy</a> describes Google's handling of information.</p>
-
-        <p><strong>OAuth credentials.</strong> The application uses Google OAuth credentials stored through GitHub Actions Secrets. Access tokens are obtained through Google's OAuth token endpoint for authorized YouTube API requests. The reviewed import and synchronization code does not explicitly write OAuth tokens to project data files.</p>
-
-        <p><strong>Data storage.</strong> Finds maintains music identification records, YouTube search metadata, playlist references, search caches, and import progress information in its private project environment. Some reports are also stored as GitHub Actions artifacts.</p>
-
-        <p><strong>Third parties.</strong> The workflow uses Google and YouTube, GitHub for private code execution and storage, and the Spotify API for separate music matching and playlist synchronization.</p>
-
-        <p><strong>Access and control.</strong> Only the developer is intended to use the tool. The developer can stop using the tool and revoke its Google account access through <a href="https://myaccount.google.com/connections">Google Account connections</a>.</p>
-
-        <p><strong>Website hosting.</strong> This page is hosted by GitHub Pages. GitHub may process technical visitor data under its own policies.</p>
-
-        <p><strong>Data retention and deletion.</strong> The project retains music metadata, search caches, and import progress to support its personal workflows. Data retention, refresh, and deletion procedures are being reviewed against applicable YouTube API Services policies before the quota extension application is submitted.</p>
-      </section>
-
-      <section id="terms">
-        <h2>Terms of Use</h2>
-
-        <p>Finds is an independently developed, personal, non-commercial project. This website is provided solely to describe the project and its use of APIs. It does not offer a public product or service.</p>
-
-        <p>Finds is not affiliated with or endorsed by Google, YouTube, Instagram, or Spotify. The developer uses third-party APIs subject to their respective terms and policies, including the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</p>
-
-        <p>Information on this site may be updated as the private project evolves.</p>
-      </section>
+      <div class="hero"><div class="eyebrow">Personal music discovery</div><h1>Good music deserves to be found again.</h1><p class="intro">Finds is a personal, non-commercial project for rediscovering music from saved social media posts and organizing identified recordings into personal playlists.</p></div>
+      <section id="about"><h2>About Finds</h2><p>Finds is a private, single-user tool developed in Python. Its workflow starts with links to Instagram posts saved by the developer. Music is identified through a review process, then the YouTube Data API is used to search for corresponding recordings and add selected videos to a playlist owned by the developer.</p><p>The project uses YouTube OAuth to authorize playlist operations on the developer's own account. It caches prior search results and checks video IDs to reduce unnecessary API requests and duplicate playlist entries. A separate Spotify API integration supports personal playlist synchronization.</p><p>This website is informational only. Finds is not a public music service and does not offer accounts or access to its underlying tool.</p></section>
+      <section id="privacy"><h2>Privacy Policy</h2><p><strong>Scope.</strong> This website is an informational page for a personal, single-user project. It does not provide user registration or a public sign-in flow.</p><p><strong>Data used by Finds.</strong> The private tool processes saved Instagram post links, manually reviewed music identification information, YouTube search results, YouTube video IDs, and playlist data needed to organize the developer's own playlists.</p><p><strong>Google and YouTube.</strong> Finds uses the YouTube Data API and Google OAuth to access the developer's own YouTube account for authorized playlist actions. Use of YouTube is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's <a href="https://policies.google.com/privacy">Privacy Policy</a> describes Google's handling of information.</p><p><strong>Third parties.</strong> The workflow also uses GitHub and, separately, the Spotify API. This website does not provide public access to the private project data.</p><p><strong>Access and control.</strong> Only the developer is intended to use the tool. The developer can stop using the tool and revoke its Google account access through <a href="https://myaccount.google.com/connections">Google Account connections</a>.</p><p><strong>Website hosting.</strong> This page is hosted by GitHub Pages. GitHub may process technical visitor data under its own policies.</p><p><strong>Documentation status.</strong> Details of OAuth token storage, retention, deletion, and any additional disclosures will be finalized after a review of the private implementation, before this policy is relied upon for an API compliance submission.</p></section>
+      <section id="terms"><h2>Terms of Use</h2><p>Finds is an independently developed, personal, non-commercial project. This website is provided solely to describe the project and its use of APIs. It does not offer a public product or service.</p><p>Finds is not affiliated with or endorsed by Google, YouTube, Instagram, or Spotify. The developer uses third-party APIs subject to their respective terms and policies, including the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</p><p>Information on this site may be updated as the private project evolves.</p></section>
     </main>
-
-    <footer>
-      <span>© 2026 Finds · Personal project</span>
-      <span>Information and documentation</span>
-    </footer>
+    <footer><span>© 2026 Finds · Personal project</span><span>Information and documentation</span></footer>
   </div>
 </body>
 </html>
